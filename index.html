@@ -1,0 +1,556 @@
+<!doctype html>
+<!--
+  ─────────────────────────────────────────────────────────────
+  PIYUSH UPPAL — PORTFOLIO
+  Personal details live in three places, all marked with a note.
+  1. <head>  → title + meta description
+  2. .hero-meta / #contact → location, availability, email, socials
+  3. each .project → links (replace "#" with your live URLs)
+  ─────────────────────────────────────────────────────────────
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Piyush Uppal — BCA Student &amp; Developer</title>
+    <meta name="description" content="Portfolio of Piyush Uppal, a third-year BCA student building web apps, database systems and terminal games. Open to internships." />
+    <meta name="author" content="Piyush Uppal" />
+    <meta name="theme-color" content="#16130f" />
+
+    <meta property="og:title" content="Piyush Uppal — BCA Student & Developer" />
+    <meta property="og:description" content="Third-year BCA student building web apps, database systems and terminal games. Open to internships." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2316130f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23faf8f4' text-anchor='middle'%3EPU%3C/text%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a class="wordmark" href="#top" aria-label="Piyush Uppal — back to top">
+          Piyush Uppal<span class="wordmark__dot">.</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── HERO ─────────────────────────────────────────── -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="hero__eyebrow reveal">BCA ’27 · Developer — India</p>
+            <h1 class="hero__title reveal" id="hero-title" data-split>
+              <span>Piyush</span>
+              <span class="hero__accent">Uppal</span>
+            </h1>
+            <p class="hero__line reveal">
+              I write code that actually runs — web apps, database systems and
+              the occasional game in C.
+            </p>
+            <div class="hero__cta reveal">
+              <a class="cta-primary" href="#projects">See the work <span aria-hidden="true">↓</span></a>
+              <a class="cta-text" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+          <aside class="hero__meta reveal" aria-label="Quick facts">
+            <ul class="meta-list">
+              <li class="meta-item">
+                <span class="meta-item__label">Location</span>
+                <span class="meta-item__value">India</span>
+              </li>
+              <li class="meta-item">
+                <span class="meta-item__label">Status</span>
+                <span class="meta-item__value meta-item__value--live">
+                  <i class="live-dot" aria-hidden="true"></i>Open to internships
+                </span>
+              </li>
+              <li class="meta-item">
+                <span class="meta-item__label">Stack</span>
+                <span class="meta-item__value">C · Java · Python · PHP · SQL</span>
+              </li>
+            </ul>
+            <p class="hero__note">
+              * third year, and permanently confused by pointer arithmetic
+            </p>
+          </aside>
+        </div>
+        <div class="container">
+          <div class="scroll-cue reveal" aria-hidden="true">
+            <span>Scroll</span><i class="scroll-cue__line"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ABOUT ────────────────────────────────────────── -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="sec-index">01 — About</p>
+            <h2 class="sec-title" id="about-title">Who’s behind the segfaults</h2>
+          </header>
+
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>
+                I didn’t start out wanting to be a developer. In first year, a
+                C programming lab threw me in at the deep end — segfaults,
+                pointers, and the quiet thrill of the first program I actually
+                understood. Ever since, I’ve been building the kind of software
+                professors assign and people actually use: a library system, a
+                CGPA calculator that made my attendance spreadsheet obsolete,
+                too many terminal games.
+              </p>
+              <p>
+                Right now I’m in my third year of BCA, working through data
+                structures, DBMS and operating systems in class while teaching
+                myself the bits the syllabus skips — clean UI, version control
+                habits, and how to ship something nobody needs a manual to use.
+              </p>
+              <p>
+                I like the middle ground: small teams, real problems, and code
+                that has a job to do.
+              </p>
+            </div>
+
+            <div class="about-facts reveal">
+              <p class="facts-label">On my desk this semester</p>
+              <ul class="facts-list">
+                <li>C &amp; C++ · data structures</li>
+                <li>Java · core + Swing</li>
+                <li>Python · scripts &amp; analysis</li>
+                <li>PHP + MySQL · web</li>
+                <li>JavaScript · making things click</li>
+              </ul>
+              <p class="facts-footnote">
+                Semester 6 begins with a minor project I’m already dreading and
+                excited about.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ─────────────────────────────────────── -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="sec-index">02 — Projects</p>
+            <h2 class="sec-title" id="projects-title">Ships that sailed</h2>
+            <p class="sec-note">
+              Five things I built, demoed and broke at least once. In order of
+              ambition.
+            </p>
+          </header>
+        </div>
+
+        <!-- Project 1 · full width -->
+        <article class="project project--wide">
+          <div class="container project__grid">
+            <div class="project__copy reveal">
+              <div class="project__num">01</div>
+              <h3 class="project__title">Library Management System</h3>
+              <p class="project__desc">
+                The college library ran on registers and guesswork. This
+                replaces them with a searchable catalogue — members, issue and
+                return, and a fine ledger the librarian can actually read.
+              </p>
+              <dl class="project__meta">
+                <div class="meta-pair"><dt>Role</dt><dd>Solo developer</dd></div>
+                <div class="meta-pair"><dt>Year</dt><dd>2025</dd></div>
+                <div class="meta-pair"><dt>Stack</dt><dd>PHP · MySQL · HTML/CSS</dd></div>
+              </dl>
+              <div class="project__links">
+                <a class="cta-primary cta-primary--sm" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+                <a class="cta-text" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+
+            <figure class="project__visual project__visual--wide reveal" aria-label="Preview of the library return desk">
+              <div class="ledger">
+                <div class="ledger__head">
+                  <span>RETURN DESK</span>
+                  <span>THU · 14:00</span>
+                </div>
+                <div class="ledger__row">
+                  <span class="ledger__title">Computer Networks</span>
+                  <span class="ledger__id">SR-2026-018</span>
+                  <span class="ledger__who">A. Gill</span>
+                  <span class="ledger__due ledger__due--late">OVERDUE</span>
+                </div>
+                <div class="ledger__row">
+                  <span class="ledger__title">Let Us C</span>
+                  <span class="ledger__id">SR-2024-102</span>
+                  <span class="ledger__who">P. Uppal</span>
+                  <span class="ledger__due">due 09 Sep</span>
+                </div>
+                <div class="ledger__row">
+                  <span class="ledger__title">DBMS Fundamentals</span>
+                  <span class="ledger__id">SR-2025-307</span>
+                  <span class="ledger__who">M. Kaur</span>
+                  <span class="ledger__due">due 16 Sep</span>
+                </div>
+                <div class="ledger__row ledger__row--gutter">
+                  <span class="ledger__title">Operating Systems</span>
+                  <span class="ledger__id">SR-2023-441</span>
+                  <span class="ledger__who">R. Sharma</span>
+                  <span class="ledger__due ledger__due--late">OVERDUE</span>
+                </div>
+                <div class="ledger__foot">
+                  1,204 titles indexed · fines update themselves
+                </div>
+              </div>
+              <figcaption class="project__fig">Return desk — issue/return + fine ledger</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Project 2 · split -->
+        <article class="project project--split">
+          <div class="container project__grid">
+            <div class="project__copy reveal">
+              <div class="project__num">02</div>
+              <h3 class="project__title">CGPA &amp; Result Calculator</h3>
+              <p class="project__desc">
+                A semester grade is a formula, a weightage chart and a lot of
+                arithmetic. I turned that into a Java program that takes grades
+                and credit points and prints your CGPA — plus what you’d need
+                next semester to recover one.
+              </p>
+              <dl class="project__meta">
+                <div class="meta-pair"><dt>Role</dt><dd>Solo developer</dd></div>
+                <div class="meta-pair"><dt>Year</dt><dd>2024</dd></div>
+                <div class="meta-pair"><dt>Stack</dt><dd>Java · Swing</dd></div>
+              </dl>
+              <div class="project__links">
+                <a class="cta-primary cta-primary--sm" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Run it <span aria-hidden="true">↗</span></a>
+                <a class="cta-text" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+
+            <figure class="project__visual reveal" aria-label="Console output of the CGPA calculator">
+              <div class="console">
+                <div class="console__bar">
+                  <span class="console__dots"><i></i><i></i><i></i></span>
+                  <span class="console__file">cgpa.jar — semester 4</span>
+                </div>
+                <pre class="console__body">ENTRY&gt; grades.csv loaded
+COURSES : 6
+CREDITS : 24
+SGPA    : 8.42
+CGPA    : 7.96  ▾ 0.14
+HINT    : "signals" is dragging you down</pre>
+              </div>
+              <figcaption class="project__fig">Terminal session — input grades, get told the truth</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Project 3 · compact, offset -->
+        <article class="project project--compact">
+          <div class="container project__grid">
+            <figure class="project__visual project__visual--small reveal" aria-label="Tic-tac-toe board in a terminal">
+              <div class="ttt">
+                <span class="ttt__cell ttt__x">X</span>
+                <span class="ttt__cell ttt__o">O</span>
+                <span class="ttt__cell">‎</span>
+                <span class="ttt__cell ttt__x">X</span>
+                <span class="ttt__cell ttt__o">O</span>
+                <span class="ttt__cell">‎</span>
+                <span class="ttt__cell">‎</span>
+                <span class="ttt__cell ttt__x ttt__win">X</span>
+                <span class="ttt__cell ttt__o">O</span>
+              </div>
+              <figcaption class="project__fig">You cannot beat it. Trust me.</figcaption>
+            </figure>
+
+            <div class="project__copy reveal">
+              <div class="project__num">03</div>
+              <h3 class="project__title">Terminal Games in C</h3>
+              <p class="project__desc">
+                Tic-tac-toe, hangman and a snake that cheats. Written to build
+                warning-free — and to finally make pointers make sense.
+              </p>
+              <dl class="project__meta">
+                <div class="meta-pair"><dt>Role</dt><dd>Solo developer</dd></div>
+                <div class="meta-pair"><dt>Year</dt><dd>2024</dd></div>
+                <div class="meta-pair"><dt>Stack</dt><dd>C</dd></div>
+              </dl>
+              <div class="project__links">
+                <a class="cta-text" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 · split reversed -->
+        <article class="project project--splitrev">
+          <div class="container project__grid">
+            <figure class="project__visual reveal" aria-label="Bar chart of semester marks">
+              <div class="chart">
+                <p class="chart__title">Semester marks — 5 subjects</p>
+                <div class="chart__bars">
+                  <div class="chart__col"><span class="chart__label">DS</span><i class="chart__bar" style="--h:84%"></i></div>
+                  <div class="chart__col"><span class="chart__label">DBMS</span><i class="chart__bar" style="--h:78%"></i></div>
+                  <div class="chart__col"><span class="chart__label">SE</span><i class="chart__bar" style="--h:66%"></i></div>
+                  <div class="chart__col"><span class="chart__label">OS</span><i class="chart__bar" style="--h:58%"></i></div>
+                  <div class="chart__col"><span class="chart__label">CN</span><i class="chart__bar chart__bar--accent" style="--h:47%"></i></div>
+                </div>
+                <p class="chart__note">one of these is not like the others</p>
+              </div>
+              <figcaption class="project__fig">Drag detected. The chart has opinions.</figcaption>
+            </figure>
+
+            <div class="project__copy reveal">
+              <div class="project__num">04</div>
+              <h3 class="project__title">Marks &amp; Attendance Analyser</h3>
+              <p class="project__desc">
+                Plots semester marks, finds the subject dragging your average
+                down, and flags low attendance long before “eligible for
+                exams” becomes a question. Built on an Excel file and mild
+                resentment.
+              </p>
+              <dl class="project__meta">
+                <div class="meta-pair"><dt>Role</dt><dd>Solo developer</dd></div>
+                <div class="meta-pair"><dt>Year</dt><dd>2025</dd></div>
+                <div class="meta-pair"><dt>Stack</dt><dd>Python · pandas · matplotlib</dd></div>
+              </dl>
+              <div class="project__links">
+                <a class="cta-text" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 · wide thin strip -->
+        <article class="project project--stripe">
+          <div class="container project__grid project__grid--stripe">
+            <div class="project__copy reveal">
+              <div class="project__num">05</div>
+              <h3 class="project__title">College Fest Microsite</h3>
+              <p class="project__desc">
+                One page for the annual fest — schedule, events, and a
+                registration form that saves to localStorage so the committee
+                can stop losing entries in their group chat.
+              </p>
+              <dl class="project__meta">
+                <div class="meta-pair"><dt>Role</dt><dd>Solo</dd></div>
+                <div class="meta-pair"><dt>Year</dt><dd>2026</dd></div>
+                <div class="meta-pair"><dt>Stack</dt><dd>HTML · CSS · JS</dd></div>
+              </dl>
+              <div class="project__links">
+                <a class="cta-text" href="https://github.com/piyushuppal" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+
+            <figure class="project__visual project__visual--stripe reveal" aria-label="Festival schedule">
+              <div class="feststripe">
+                <div class="feststripe__row">
+                  <span class="feststripe__day">DAY 1</span>
+                  <span class="feststripe__event">code sprint</span>
+                  <span class="feststripe__time">09:00</span>
+                </div>
+                <div class="feststripe__row">
+                  <span class="feststripe__day">DAY 2</span>
+                  <span class="feststripe__event">project expo</span>
+                  <span class="feststripe__time">11:00</span>
+                </div>
+                <div class="feststripe__row">
+                  <span class="feststripe__day">DAY 3</span>
+                  <span class="feststripe__event feststripe__event--accent">the quiz</span>
+                  <span class="feststripe__time">14:30</span>
+                </div>
+              </div>
+              <figcaption class="project__fig">Live schedule — 3 days, zero paper</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <div class="container">
+          <p class="projects-outro reveal">
+            More experiments, half-ideas and abandoned hobbies live on my
+            <a href="https://github.com/piyushuppal" target="_blank" rel="noopener">GitHub</a> — some of them even compile.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── SKILLS ───────────────────────────────────────── -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="sec-index">03 — Skills</p>
+            <h2 class="sec-title" id="skills-title">What I actually use</h2>
+            <p class="sec-note">
+              Grouped by how it shows up in real work — no percentage bars,
+              just what I’ve shipped with.
+            </p>
+          </header>
+
+          <div class="skills-grid">
+            <div class="skill-col reveal">
+              <h3 class="skill-label">Languages</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span>C &amp; C++</span><span class="skill-note">where it started</span></li>
+                <li class="skill-item"><span>Java</span><span class="skill-note">labs + Swing apps</span></li>
+                <li class="skill-item"><span>Python</span><span class="skill-note">scripts &amp; data</span></li>
+                <li class="skill-item"><span>JavaScript</span><span class="skill-note">the web layer</span></li>
+                <li class="skill-item"><span>HTML &amp; CSS</span><span class="skill-note">every project above</span></li>
+              </ul>
+            </div>
+
+            <div class="skill-col reveal">
+              <h3 class="skill-label">Web &amp; Tools</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span>MySQL</span><span class="skill-note">design + queries</span></li>
+                <li class="skill-item"><span>PHP</span><span class="skill-note">server-side work</span></li>
+                <li class="skill-item"><span>Git &amp; GitHub</span><span class="skill-note">habit since 2024</span></li>
+                <li class="skill-item"><span>VS Code</span><span class="skill-note">the daily driver</span></li>
+                <li class="skill-item"><span>React</span><span class="skill-note">getting comfortable</span></li>
+              </ul>
+            </div>
+
+            <div class="skill-col reveal">
+              <h3 class="skill-label">Core CS</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span>Data Structures</span><span class="skill-note">arrays to trees</span></li>
+                <li class="skill-item"><span>DBMS &amp; SQL</span><span class="skill-note">normalisation, joins</span></li>
+                <li class="skill-item"><span>Operating Systems</span><span class="skill-note">processes, memory</span></li>
+                <li class="skill-item"><span>Computer Networks</span><span class="skill-note">the family cookbook</span></li>
+                <li class="skill-item"><span>Software Engineering</span><span class="skill-note">SDLC, UML basics</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="learning-strip reveal">
+            <span class="learning-label">Currently learning</span>
+            <p class="learning-list">
+              Node.js &amp; Express · more DSA · interfaces people don’t have to think about
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── EXPERIENCE / EDUCATION ───────────────────────── -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="sec-index">04 — Experience</p>
+            <h2 class="sec-title" id="experience-title">The resume bit</h2>
+            <p class="sec-note">
+              Short on job titles, long on lab hours. Working on the first half.
+            </p>
+          </header>
+
+          <div class="timeline">
+            <div class="tl-item reveal">
+              <div class="tl-date">
+                <p class="tl-when">2024 — 2027</p>
+                <p class="tl-where">BCA</p>
+              </div>
+              <div class="tl-body">
+                <h3 class="tl-title">Bachelor of Computer Applications · Third year</h3>
+                <p>
+                  Major coursework in data structures, DBMS, operating systems,
+                  computer networks and software engineering. Survived three
+                  minor project demos so far — the fourth is in progress.
+                </p>
+                <p class="tl-tag">Currently enrolled</p>
+              </div>
+            </div>
+
+            <div class="tl-item reveal">
+              <div class="tl-date">
+                <p class="tl-when">2022 — 2024</p>
+                <p class="tl-where">12th</p>
+              </div>
+              <div class="tl-body">
+                <h3 class="tl-title">Senior Secondary — Computer Science (Science stream)</h3>
+                <p>
+                  First real contact with a keyboard that led somewhere. The
+                  C++ + MySQL syllabus is not why I’m here, but it helped.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item reveal">
+              <div class="tl-date">
+                <p class="tl-when">2024 — now</p>
+                <p class="tl-where">Side work</p>
+              </div>
+              <div class="tl-body">
+                <h3 class="tl-title">University mini-projects, every semester</h3>
+                <p>
+                  Four projects shipped and demoed across C, Java, PHP and
+                  Python — the ones on this page. Each one taught me something
+                  the previous one forgot to.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ──────────────────────────────────────── -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact__inner">
+            <p class="sec-index sec-index--light reveal">05 — Contact</p>
+            <h2 class="contact__title reveal" id="contact-title">Let’s work together<span class="contact__dot">.</span></h2>
+            <p class="contact__statement reveal">
+              I’m planning to spend the summer learning whatever an internship
+              can teach me. If that could be with you — an open-source repo, a
+              college project, or a small thing that needs hands — I’d love to
+              hear about it.
+              <!-- NOTE: replace with your real email -->
+            </p>
+
+            <a class="contact__email reveal" href="mailto:hello@piyushuppal.dev">
+              hello@piyushuppal.dev <span aria-hidden="true">↗</span>
+            </a>
+
+            <ul class="contact__links reveal">
+              <!-- NOTE: replace with your real profiles -->
+              <li><a href="https://github.com/piyushuppal" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/piyushuppal" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://instagram.com/piyushuppal" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="mailto:hello@piyushuppal.dev">Email</a></li>
+            </ul>
+
+            <p class="contact__resume reveal">
+              Need the formal version? <a href="mailto:hello@piyushuppal.dev?subject=Resume request">Ask me for my resume</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>© <span data-year>2026</span> Piyush Uppal. Made with plain HTML, CSS &amp; a lot of F5.</p>
+        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
