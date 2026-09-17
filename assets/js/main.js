@@ -400,9 +400,120 @@
     update();
   };
 
+  /* ── Custom cursor ────────────────────────────────────────── */
+  const initCursor = () => {
+    if (reduceMotion || !window.matchMedia("(pointer: fine)").matches) return;
+
+    const dot = document.createElement("div");
+    dot.className = "cursor-dot";
+    dot.setAttribute("aria-hidden", "true");
+    const ring = document.createElement("div");
+    ring.className = "cursor-ring";
+    ring.setAttribute("aria-hidden", "true");
+    const label = document.createElement("span");
+    label.className = "cursor-ring__label";
+    ring.appendChild(label);
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    document.documentElement.classList.add("has-custom-cursor");
+
+    let mx = window.innerWidth / 2;
+    let my = window.innerHeight / 2;
+    let rx = mx;
+    let ry = my;
+    let scale = 1;
+    let targetScale = 1;
+    let filled = false;
+    let labelText = "";
+
+    const apply = (dt) => {
+      const k = 1 - Math.exp((-dt / 1000) * 6);
+      rx += (mx - rx) * k;
+      ry += (my - ry) * k;
+      scale += (targetScale - scale) * k;
+      if (label.textContent !== labelText) label.textContent = labelText;
+      dot.style.transform = `translate3d(${mx}px,${my}px,0) translate(-50%,-50%)`;
+      ring.style.transform = `translate3d(${rx.toFixed(2)}px,${ry.toFixed(2)}px,0) translate(-50%,-50%) scale(${scale.toFixed(3)})`;
+      ring.classList.toggle("is-label", labelText !== "");
+      ring.classList.toggle("is-filled", filled);
+      dot.classList.toggle("is-hidden", labelText !== "" || filled);
+    };
+
+    const reset = () => {
+      targetScale = 1;
+      filled = false;
+      labelText = "";
+    };
+
+    window.addEventListener(
+      "mousemove",
+      (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        if (!dot.classList.contains("is-visible")) {
+          dot.classList.add("is-visible");
+          ring.classList.add("is-visible");
+        }
+      },
+      { passive: true }
+    );
+
+    document.addEventListener(
+      "mouseover",
+      (e) => {
+        const t = e.target.closest
+          ? e.target.closest(".hero__visual, [data-scene], .project__visual, .cta-primary, .contact__links a, button, a")
+          : null;
+        if (!t) {
+          reset();
+          return;
+        }
+        if (t.matches(".hero__visual, [data-scene]")) {
+          targetScale = 2.1;
+          filled = true;
+          labelText = "EXPLORE";
+        } else if (t.matches(".project__visual")) {
+          targetScale = 2.1;
+          filled = true;
+          labelText = "VIEW";
+        } else if (t.matches(".cta-primary, .contact__links a, button")) {
+          targetScale = 1.65;
+          filled = true;
+          labelText = "";
+        } else {
+          targetScale = 1.45;
+          filled = false;
+          labelText = "";
+        }
+      },
+      { passive: true }
+    );
+
+    document.documentElement.addEventListener("mouseleave", () => {
+      dot.classList.remove("is-visible");
+      ring.classList.remove("is-visible");
+    });
+    document.documentElement.addEventListener("mouseenter", () => {
+      dot.classList.add("is-visible");
+      ring.classList.add("is-visible");
+    });
+
+    let last = performance.now();
+    const loop = (now) => {
+      if (!document.hidden) {
+        const dt = Math.min(now - last, 64);
+        last = now;
+        apply(dt);
+      }
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+  };
+
   /* ── Boot ─────────────────────────────────────────────────── */
   initStarfield();
   initHeroScene();
+  initCursor();
   if (finePointer && !reduceMotion) initTilt();
   if (!reduceMotion) initParallax();
 })();
