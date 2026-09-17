@@ -16,7 +16,7 @@
     <title>Piyush Uppal — BCA Student &amp; Developer</title>
     <meta name="description" content="Portfolio of Piyush Uppal, a third-year BCA student building web apps, database systems and terminal games. Open to internships." />
     <meta name="author" content="Piyush Uppal" />
-    <meta name="theme-color" content="#16130f" />
+    <meta name="theme-color" content="#07070d" />
 
     <meta property="og:title" content="Piyush Uppal — BCA Student & Developer" />
     <meta property="og:description" content="Third-year BCA student building web apps, database systems and terminal games. Open to internships." />
@@ -36,6 +36,8 @@
 
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
+    <canvas class="bg-canvas" data-bg-scene aria-hidden="true"></canvas>
 
     <header class="site-header" data-header>
       <div class="container site-header__inner">
@@ -73,27 +75,32 @@
             </div>
           </div>
 
-          <aside class="hero__meta reveal" aria-label="Quick facts">
-            <ul class="meta-list">
-              <li class="meta-item">
-                <span class="meta-item__label">Location</span>
-                <span class="meta-item__value">Phillaur, Punjab, India</span>
-              </li>
-              <li class="meta-item">
-                <span class="meta-item__label">Status</span>
-                <span class="meta-item__value meta-item__value--live">
-                  <i class="live-dot" aria-hidden="true"></i>Open to internships
-                </span>
-              </li>
-              <li class="meta-item">
-                <span class="meta-item__label">Stack</span>
-                <span class="meta-item__value">C · Python · SQL · JS</span>
-              </li>
-            </ul>
-            <p class="hero__note">
-              * third year, and permanently confused by pointer arithmetic
-            </p>
-          </aside>
+          <div class="hero__visual" data-parallax="0.04">
+            <div class="hero__scene" data-scene aria-hidden="true"></div>
+            <aside class="glass hero__meta reveal" aria-label="Quick facts">
+              <ul class="meta-list">
+                <li class="meta-item">
+                  <span class="meta-item__label">Location</span>
+                  <span class="meta-item__value">Phillaur, Punjab, India</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-item__label">Status</span>
+                  <span class="meta-item__value meta-item__value--live">
+                    <i class="live-dot" aria-hidden="true"></i>Open to internships
+                  </span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-item__label">Stack</span>
+                  <span class="meta-item__value">C · Python · SQL · JS</span>
+                </li>
+              </ul>
+              <p class="hero__note">
+                * third year, and permanently confused by pointer arithmetic
+              </p>
+            </aside>
+            <span class="float-chip float-chip--a" aria-hidden="true">BCA ’27</span>
+            <span class="float-chip float-chip--b" aria-hidden="true">make it compile</span>
+          </div>
         </div>
         <div class="container">
           <div class="scroll-cue reveal" aria-hidden="true">
@@ -133,7 +140,7 @@
               </p>
             </div>
 
-            <div class="about-facts reveal">
+            <div class="about-facts glass reveal" data-tilt>
               <p class="facts-label">On my desk this semester</p>
               <ul class="facts-list">
                 <li>C &amp; C++ · data structures</li>
@@ -184,7 +191,7 @@
               </div>
             </div>
 
-            <figure class="project__visual project__visual--wide reveal" aria-label="Preview of the library return desk">
+            <figure class="project__visual project__visual--wide reveal" data-tilt aria-label="Preview of the library return desk">
               <div class="ledger">
                 <div class="ledger__head">
                   <span>RETURN DESK</span>
@@ -246,7 +253,7 @@
               </div>
             </div>
 
-            <figure class="project__visual reveal" aria-label="Console output of the CGPA calculator">
+            <figure class="project__visual reveal" data-tilt aria-label="Console output of the CGPA calculator">
               <div class="console">
                 <div class="console__bar">
                   <span class="console__dots"><i></i><i></i><i></i></span>
@@ -267,7 +274,7 @@ HINT    : "signals" is dragging you down</pre>
         <!-- Project 3 · compact, offset -->
         <article class="project project--compact">
           <div class="container project__grid">
-            <figure class="project__visual project__visual--small reveal" aria-label="Tic-tac-toe board in a terminal">
+            <figure class="project__visual project__visual--small reveal" data-tilt aria-label="Tic-tac-toe board in a terminal">
               <div class="ttt">
                 <span class="ttt__cell ttt__x">X</span>
                 <span class="ttt__cell ttt__o">O</span>
@@ -304,7 +311,7 @@ HINT    : "signals" is dragging you down</pre>
         <!-- Project 4 · split reversed -->
         <article class="project project--splitrev">
           <div class="container project__grid">
-            <figure class="project__visual reveal" aria-label="Bar chart of semester marks">
+            <figure class="project__visual reveal" data-tilt aria-label="Bar chart of semester marks">
               <div class="chart">
                 <p class="chart__title">Semester marks — 5 subjects</p>
                 <div class="chart__bars">
@@ -361,7 +368,7 @@ HINT    : "signals" is dragging you down</pre>
               </div>
             </div>
 
-            <figure class="project__visual project__visual--stripe reveal" aria-label="Festival schedule">
+            <figure class="project__visual project__visual--stripe reveal" data-tilt aria-label="Festival schedule">
               <div class="feststripe">
                 <div class="feststripe__row">
                   <span class="feststripe__day">DAY 1</span>
